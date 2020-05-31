@@ -28,7 +28,8 @@ import axios from 'axios';
           cols: [
           
             // 一行数据，解构这个row，得到这一条数据
-            {'title':'车辆图片','key':'img',render(h,{row}){
+            {'title':'车辆图片','key':'img',width:180,
+              render(h,{row}){
               console.log(row);
               
               return h('div',[h('img',{
