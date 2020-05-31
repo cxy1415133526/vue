@@ -1,8 +1,7 @@
 <template>
   <div class="wrap">
-    
-        <CheckboxGroup v-model="color" v-for="(item,index) in ['红','绿','蓝','白','黑']" >
-        <Checkbox :label="item" :key="index">
+        <CheckboxGroup v-model="color"  >
+        <Checkbox :label="item" :key="index" v-for="(item,index) in ['红','绿','蓝','白','黑']">
             <span>{{item}}</span>
         </Checkbox>        
       </CheckboxGroup>
@@ -47,7 +46,7 @@ import axios from 'axios';
             {'title':'燃料','key':'fuel'},            
           ],
           data:[],
-          color:['红','蓝']
+          color:[]
 
         }
       },
