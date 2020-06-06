@@ -48,7 +48,7 @@
             }
         },
         created() {
-            axios.get('http://www.aiqianduan.com:56506/shdz/苏打水3').then(data => {
+            axios.get('http://www.aiqianduan.com:56506/shdz/苏打水5').then(data => {
                 this.arr = data.data;
             })
         },
@@ -69,7 +69,7 @@
                             alias
                         } = this.$refs.ModalInn.myform;
                          this.isShowModal=false;
-                         axios.post('http://www.aiqianduan.com:56506/shdz/苏打水3',{
+                         axios.post('http://www.aiqianduan.com:56506/shdz/苏打水5',{
                              p,c,a,s,d,n,alias,tel
                          }).then(data=>{
                              alert(data.data);
