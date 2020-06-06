@@ -67,7 +67,7 @@
                             d,
                             n,
                             alias
-                        } = this.$refs.ModalInn.$refs.myform;
+                        } = this.$refs.ModalInn.myform;
                          this.isShowModal=false;
                          axios.post('http://www.aiqianduan.com:56506/shdz/苏打水3',{
                              p,c,a,s,d,n,alias,tel
