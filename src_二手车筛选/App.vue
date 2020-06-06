@@ -8,7 +8,7 @@
            
       <Table :columns="cols" :data="data" ></Table>
     <div class="pagebox">
-       <Page :total="total"  :current='current' :page-size='10'  @on-change='changePage' prev-text='上一页' next-text='下一页' show-sizer />
+       <Page :total="total"  :current='current' show-sizer :page-size='pagesize' @on-page-size-change='pagesizechange'  @on-change='changePage' prev-text='上一页' next-text='下一页' show-sizer />
     </div>
       
   </div>
@@ -24,7 +24,7 @@ import axios from 'axios';
         return {
           current:1,
           total:0,
-         
+          pagesize:20,
           cols: [
           
             // 一行数据，解构这个row，得到这一条数据
@@ -63,6 +63,9 @@ import axios from 'axios';
         changePage(current){
           this.current=current;
           this.loadData();
+        },
+        pagesizechange(pagesize){
+          this.pagesize=pagesize;
         }
       },
       watch:{
